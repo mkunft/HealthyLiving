@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Daily Stats</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content style='height: 100%; overflow: hidden' padding>
+
+  <b>Calorie Counter</b>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>Today</ion-col>
+      <ion-col col-3><div [style.color]="cals.today.calories.color">{{cals.today.calories.count}} kcal</div></ion-col>
+      <ion-col col-3><div [style.color]="cals.today.syns.color">{{cals.today.syns.count}} syns</div></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>Yesterday</ion-col>
+      <ion-col col-3><div [style.color]="cals.yesterday.calories.color">{{cals.yesterday.calories.count}} kcal</div></ion-col>
+      <ion-col col-3><div [style.color]="cals.yesterday.syns.color">{{cals.yesterday.syns.count}} syns</div></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <b>Burn Counter</b>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>Today</ion-col>
+      <ion-col col-3><div [style.color]="burn.today.burn.color">{{burn.today.burn.count}} kcal</div></ion-col>
+      <ion-col col-3><div [style.color]="burn.today.min.color">{{burn.today.min.count}} min</div></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>Yesterday</ion-col>
+      <ion-col col-3><div [style.color]="burn.yesterday.burn.color">{{burn.yesterday.burn.count}} kcal</div></ion-col>
+      <ion-col col-3><div [style.color]="burn.yesterday.min.color">{{burn.yesterday.min.count}} min</div></ion-col>
+    </ion-row>
+  </ion-grid>
+  <b>Progress</b>
+  <div style="height: 300px">
+    <canvas #barCanvas></canvas>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,10 @@
+page-hello-ionic {
+  .scroll-content {
+    background-color: map-get($colors, light);
+  }
+  .home-container {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    height: 100%;
+  }
+}
